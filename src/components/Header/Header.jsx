@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import linkedin from "../../../public/linkedin.svg";
-import github from "../../../public/github.svg";
+import linkedin from "/linkedin.svg";
+import github from "/github.svg";
 
 function Header() {
 	const navigate = useNavigate();
@@ -43,12 +43,12 @@ function Header() {
 	];
 
 	return (
-		<div className="flex items-center text-white justify-between sticky top-0 shadow-xl px-20">
+		<div className="flex items-center text-white justify-between sticky top-0 shadow-edCustom px-20 h-16 bg-[#001429]">
 			{/* Logo Div */}
 			<div className="py-2">
 				<p className="text-[40px] font-bold">
-					<span className="text-[#f5c400]">S</span>hekhar{" "}
-					<span className="text-[#f5c400]">S</span>harma
+					<span className="text-[#FFD700]">S</span>hekhar{" "}
+					<span className="text-[#FFD700]">S</span>harma
 				</p>
 			</div>
 
@@ -57,7 +57,7 @@ function Header() {
 				{navItems.map((nav) => (
 					<li
 						key={nav.name}
-						className="hover:text-[#f5c400] cursor-pointer"
+						className="hover:text-[#FFD700] cursor-pointer"
 					>
 						<NavLink
 							to={nav.url}
@@ -65,7 +65,7 @@ function Header() {
 								isPending
 									? "pending"
 									: isActive
-									? "text-[#f5c400]"
+									? "text-[#FFD700]"
 									: ""
 							}
 						>

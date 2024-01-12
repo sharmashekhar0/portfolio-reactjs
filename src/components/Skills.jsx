@@ -3,13 +3,14 @@ import c from "/c.png";
 import cplusplus from "/cplusplus.png";
 import html from "/html.png";
 import css from "/css.png";
-import git from "/git.png";
-import github from "/github.png";
 import js from "/js.png";
 import javascript from "/javascript.png";
 import bootstrap from "/bootstrap.png";
 import tailwind from "/tailwind.png";
 import reactjs from "/reactjs.png";
+import redux from "/redux.png";
+import git from "/git.png";
+import github from "/github.png";
 
 function Skills() {
 	const skills = [
@@ -45,14 +46,26 @@ function Skills() {
 			name: "React",
 			src: reactjs,
 		},
+		{
+			name: "Redux",
+			src: redux,
+		},
+		{
+			name: "Git",
+			src: git,
+		},
+		{
+			name: "Github",
+			src: github,
+		},
 	];
 
 	return (
-		<div className="px-20 border">
+		<div className="px-20 mb-10">
 			<p className="text-5xl text-white">Skills.</p>
-			<div className="text-3xl border gap-8 text-white grid grid-cols-4">
+			<div className="text-2xl gap-8 py-4 text-white grid grid-cols-6 ">
 				{skills.map((skill) => (
-					<div className="flex flex-col items-center p-8 gap-8 bg-gray-700 h-40 w-40 rounded-md">
+					<div className="flex flex-col items-center p-8 gap-8 mx-auto bg-[#0C2340] shadow-edCustom bg-opacity-40 h-40 w-40 rounded-md">
 						<img
 							className="max-w-24 max-h-12 scale-150"
 							src={skill.src}
