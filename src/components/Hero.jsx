@@ -4,7 +4,11 @@ function Hero() {
 	const dynamicHeight = `calc(100vh - 64px)`;
 
 	return (
-		<div style={{ height: dynamicHeight }} className={`text-[#F0E68C] p-20 w-screen`}>
+		<div
+			id="hero"
+			style={{ height: dynamicHeight }}
+			className={`text-[#F0E68C] p-20 w-screen`}
+		>
 			<div className="w-2/3 h-full text-7xl flex items-center justify-center">
 				<div>
 					<p>Hey!</p>

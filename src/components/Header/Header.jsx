@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import linkedin from "/linkedin.svg";
 import github from "/github.svg";
+import { Link as LinkScroll } from "react-scroll";
 
 function Header() {
 	const navigate = useNavigate();
@@ -9,23 +10,28 @@ function Header() {
 	const navItems = [
 		{
 			name: "Home",
-			url: "/",
+			url: "",
+			scrollTo: "hero",
 		},
 		{
 			name: "Skills",
-			url: "/skills",
+			url: "skills",
+			scrollTo: "skills",
 		},
 		{
 			name: "Projects",
-			url: "/Projects",
+			url: "Projects",
+			scrollTo: "projects",
 		},
 		{
 			name: "About",
-			url: "/About",
+			url: "About",
+			scrollTo: "about",
 		},
 		{
 			name: "Contact",
-			url: "/Contact",
+			url: "Contact",
+			scrollTo: "contact",
 		},
 	];
 
@@ -43,7 +49,7 @@ function Header() {
 	];
 
 	return (
-		<div className="flex items-center text-white justify-between sticky top-0 shadow-edCustom px-20 h-16 bg-[#001429]">
+		<div className="flex items-center text-white justify-between sticky top-0 shadow-edCustom px-20 h-16 bg-[#001429] z-10">
 			{/* Logo Div */}
 			<div className="py-2">
 				<p className="text-[40px] font-bold">
@@ -69,7 +75,15 @@ function Header() {
 									: ""
 							}
 						>
-							{nav.name}
+							<LinkScroll
+								to={nav.scrollTo}
+								spy={true}
+								smooth={true}
+								offset={-100}
+								duration={500}
+							>
+								{nav.name}
+							</LinkScroll>
 						</NavLink>
 					</li>
 				))}

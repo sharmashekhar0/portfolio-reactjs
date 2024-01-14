@@ -1,5 +1,7 @@
 import {
+	About,
 	Academics,
+	ContactForm,
 	Container,
 	Footer,
 	Header,
@@ -16,6 +18,8 @@ function App() {
 			<Skills />
 			<Academics />
 			<Projects />
+			<About />
+			<ContactForm />
 			<Footer />
 		</Container>
 	);

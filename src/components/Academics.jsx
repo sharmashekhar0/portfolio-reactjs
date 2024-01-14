@@ -29,11 +29,18 @@ function Academics() {
 	];
 
 	return (
-		<div className="min-h-96 px-20">
+		<div
+			style={{ minHeight: `calc(100vh - 64px)` }}
+			className="min-h-96 px-20 mb-40"
+			id="academics"
+		>
 			<p className="text-5xl text-white">Academics.</p>
 			<div className="text-white text-2xl flex flex-col gap-4 py-8">
 				{academics.map((academic) => (
-					<div className="flex items-center justify-between bg-[#0C2340] h-32 shadow-edCustom bg-opacity-40 px-12 rounded-md">
+					<div
+						key={academic.course}
+						className="flex items-center justify-between bg-[#0C2340] h-24 shadow-edCustom bg-opacity-40 px-12 rounded-md"
+					>
 						<div className="flex flex-col justify-between h-2/3">
 							<p className="text-3xl text-[#FFC72C] font-semibold">
 								{academic.instituteName}

@@ -61,11 +61,14 @@ function Skills() {
 	];
 
 	return (
-		<div className="px-20 mb-10">
+		<div className="px-20 mb-40" id="skills">
 			<p className="text-5xl text-white">Skills.</p>
 			<div className="text-2xl gap-8 py-4 text-white grid grid-cols-6 ">
 				{skills.map((skill) => (
-					<div className="flex flex-col items-center p-8 gap-8 mx-auto bg-[#0C2340] shadow-edCustom bg-opacity-40 h-40 w-40 rounded-md">
+					<div
+						key={skill.name}
+						className="flex flex-col items-center p-8 gap-8 mx-auto bg-[#0C2340] shadow-edCustom bg-opacity-40 h-40 w-40 rounded-md"
+					>
 						<img
 							className="max-w-24 max-h-12 scale-150"
 							src={skill.src}
