@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import linkedin from "/linkedin.svg";
 import github from "/github.svg";
 import { Link as LinkScroll } from "react-scroll";
+import { IoMenu } from "react-icons/io5";
 
 function Header() {
 	const navigate = useNavigate();
@@ -52,14 +53,14 @@ function Header() {
 		<div className="flex items-center text-white justify-between sticky top-0 shadow-edCustom px-20 h-16 bg-[#001429] z-10">
 			{/* Logo Div */}
 			<div className="py-2">
-				<p className="text-[40px] font-bold">
+				<p className="text-[26px] md:text-[32px] lg:text-[40px] font-bold">
 					<span className="text-[#FFD700]">S</span>hekhar{" "}
 					<span className="text-[#FFD700]">S</span>harma
 				</p>
 			</div>
 
 			{/* Nav Link */}
-			<ul className="flex gap-8 text-[20px] font-semibold">
+			<ul className="hidden xl:flex gap-8 text-[20px] font-semibold">
 				{navItems.map((nav) => (
 					<li
 						key={nav.name}
@@ -90,7 +91,7 @@ function Header() {
 			</ul>
 
 			{/* Social Profile Link */}
-			<ul className="flex gap-8">
+			<ul className="hidden xl:flex gap-8">
 				{socialLinks.map((social) => (
 					<li
 						key={social.name}
@@ -107,6 +108,11 @@ function Header() {
 					</li>
 				))}
 			</ul>
+			<div className="text-3xl flex items-center justify-center xl:hidden">
+				<button>
+					<IoMenu />
+				</button>
+			</div>
 		</div>
 	);
 }

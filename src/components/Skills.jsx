@@ -11,6 +11,7 @@ import reactjs from "/reactjs.png";
 import redux from "/redux.png";
 import git from "/git.png";
 import github from "/github.png";
+import appwrite from "/appwrite.png";
 
 function Skills() {
 	const skills = [
@@ -58,12 +59,16 @@ function Skills() {
 			name: "Github",
 			src: github,
 		},
+		{
+			name: "Appwrite",
+			src: appwrite,
+		},
 	];
 
 	return (
 		<div className="px-20 mb-40" id="skills">
 			<p className="text-5xl text-white">Skills.</p>
-			<div className="text-2xl gap-8 py-4 text-white grid grid-cols-6 ">
+			<div className="text-2xl gap-8 py-4 text-white grid lg:grid-cols-5 xl:grid-cols-6 md:grid-cols-4 sm:grid-cols-2">
 				{skills.map((skill) => (
 					<div
 						key={skill.name}
