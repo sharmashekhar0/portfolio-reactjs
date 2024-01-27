@@ -1,12 +1,12 @@
 import React from "react";
 import rockpaperscissor from "/Rock_Paper_Scissor_Game.png";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
+import passwordGenerator from "/passwordGenerator.png";
 import todosomething from "/todosomething.png";
+import MegaBlog from "/MegaBlog.png";
 import { Link } from "react-router-dom";
 
 function Projects() {
-
 	const projects = [
 		{
 			name: "ToDoSomething",
@@ -14,6 +14,13 @@ function Projects() {
 			techStack: ["TailwindCSS", "ReactJS", "Redux-toolkit", "Appwrite"],
 			url: "https://to-do-something.vercel.app/",
 			githubLink: "https://github.com/sharmashekhar0/ToDoSomething",
+		},
+		{
+			name: "MegaBlog",
+			image: MegaBlog,
+			techStack: ["TailwindCSS", "ReactJS", "Redux-toolkit", "Appwrite"],
+			url: "https://my-mega-blog.vercel.app/",
+			githubLink: "https://github.com/sharmashekhar0/MegaBlog",
 		},
 		{
 			name: "Rock Paper Scissor Game",
@@ -24,18 +31,11 @@ function Projects() {
 		},
 
 		{
-			name: "MegaBlog",
-			image: "",
-			techStack: ["TailwindCSS", "ReactJS", "Redux-toolkit", "Appwrite"],
-			url: "",
-			githubLink: "",
-		},
-		{
-			name: "75Hard",
-			image: "",
-			techStack: ["TailwindCSS", "ReactJS", "Redux-toolkit"],
-			url: "",
-			githubLink: "",
+			name: "Password Generator",
+			image: passwordGenerator,
+			techStack: ["TailwindCSS", "ReactJS"],
+			url: "https://securepasswordgenerator.vercel.app/",
+			githubLink: "https://github.com/sharmashekhar0/password-generator",
 		},
 	];
 
@@ -71,7 +71,7 @@ function Projects() {
 							className="relative flex items-center justify-center"
 						>
 							<FaExternalLinkAlt
-								className="absolute  text-7xl
+								className="absolute  text-7xl opacity-50
 							top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 							/>
 							<img
