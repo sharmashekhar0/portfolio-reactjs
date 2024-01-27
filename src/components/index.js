@@ -1,4 +1,4 @@
-import Container from "./Container/container";
+import Container from "./Container/Container";
 import Header from "./Header/Header";
 import Hero from "./Hero";
 import Skills from "./Skills";
