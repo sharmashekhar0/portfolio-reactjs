@@ -42,18 +42,20 @@ function Projects() {
 	return (
 		<div
 			style={{ minHeight: `calc(100vh - 64px)` }}
-			className="px-20 min-h-96 mb-40"
+			className="px-4 sm:px-20 min-h-96 mb-40"
 			id="projects"
 		>
 			<p className="text-5xl text-white">Projects.</p>
-			<div className="min-h-96 py-4 grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between">
+			<div className="min-h-96 py-4  grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between">
 				{projects.map((project, index) => (
 					<div
 						key={index}
-						className="text-white flex flex-col justify-between shadow-edCustom min-h-96 rounded-md p-4 bg-slate-900"
+						className="text-white flex flex-col justify-between shadow-edCustom min-h-96 
+						
+						rounded-md p-4 bg-slate-900"
 					>
-						<div className="w-full flex items-center justify-between text-2xl">
-							<p className="text-nowrap cursor-pointer rounded-sm font-semibold w-full text-[#FFD700]">
+						<div className="w-full flex items-center justify-between text-xl  sm:text-2xl">
+							<p className="w-1/2 sm:text-nowrap cursor-pointer rounded-sm font-semibold sm:w-full text-[#FFD700]">
 								{project.name}
 							</p>
 							<Link
@@ -81,7 +83,7 @@ function Projects() {
 							/>
 						</Link>
 
-						<div className="flex gap-2">
+						<div className="flex flex-col sm:flex-row gap-2">
 							{project.techStack.map((tech) => {
 								return (
 									<p
